@@ -1,0 +1,4 @@
+Table I Statistics (Weighted by Num_Upgrades for Pre-2019)
+   Eligible        EPC    Income        COPD
+0         0  62.755171  0.085745  114.016743
+1         1  64.773894  0.255089  233.447222

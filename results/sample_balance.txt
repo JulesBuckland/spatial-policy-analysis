@@ -1,0 +1,5 @@
+--- Sample Selection Balance (IMD Score) ---
+Included (n=152): 0.166
+Excluded (n=200): 0.173
+Difference: -0.007
+P-value: 0.4684

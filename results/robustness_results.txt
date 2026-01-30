@@ -1,0 +1,154 @@
+
+
+=== ROBUSTNESS CHECK 1: PLACEBO (HIP FRACTURE) ===
+Outcome: Hip_Rate
+Treatment: Treat_Top20
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:               Hip_Rate   R-squared:                        0.0001
+Estimator:                   PanelOLS   R-squared (Between):             -0.0026
+No. Observations:                1470   R-squared (Within):               0.0003
+Date:                Mon, Jan 26 2026   R-squared (Overall):             -0.0026
+Time:                        20:19:22   Log-likelihood                   -5607.9
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      0.1477
+Entities:                         147   P-value                           0.7008
+Avg Obs:                      10.0000   Distribution:                  F(1,1313)
+Min Obs:                      10.0000                                           
+Max Obs:                      10.0000   F-statistic (robust):             0.1477
+                                        P-value                           0.7008
+Time periods:                      10   Distribution:                  F(1,1313)
+Avg Obs:                       147.00                                           
+Min Obs:                       147.00                                           
+Max Obs:                       147.00                                           
+                                                                                
+                                Parameter Estimates                                 
+====================================================================================
+                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------
+Treat_Top20:Post    -0.4754     1.2370    -0.3843     0.7008     -2.9021      1.9513
+====================================================================================
+
+F-test for Poolability: 79.865
+P-value: 0.0000
+Distribution: F(155,1313)
+
+Included effects: Entity, Time
+
+
+=== ROBUSTNESS CHECK 2: THRESHOLD (TOP 10% UPGRADES) ===
+Outcome: COPD_Rate
+Treatment: Treat_Top10
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:              COPD_Rate   R-squared:                        0.0077
+Estimator:                   PanelOLS   R-squared (Between):              0.0079
+No. Observations:                1470   R-squared (Within):               0.0178
+Date:                Mon, Jan 26 2026   R-squared (Overall):              0.0080
+Time:                        20:19:22   Log-likelihood                   -6268.9
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      10.123
+Entities:                         147   P-value                           0.0015
+Avg Obs:                      10.0000   Distribution:                  F(1,1313)
+Min Obs:                      10.0000                                           
+Max Obs:                      10.0000   F-statistic (robust):             10.123
+                                        P-value                           0.0015
+Time periods:                      10   Distribution:                  F(1,1313)
+Avg Obs:                       147.00                                           
+Min Obs:                       147.00                                           
+Max Obs:                       147.00                                           
+                                                                                
+                                Parameter Estimates                                 
+====================================================================================
+                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------
+Treat_Top10:Post     10.191     3.2031     3.1816     0.0015      3.9074      16.475
+====================================================================================
+
+F-test for Poolability: 249.05
+P-value: 0.0000
+Distribution: F(155,1313)
+
+Included effects: Entity, Time
+
+
+=== ROBUSTNESS CHECK 3: FORMAL PRE-TREND TEST ===
+Model: COPD ~ Treated * LinearTime (2015-2018)
+Null Hypothesis: Interaction Coefficient = 0 (Parallel Trends)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:              COPD_Rate   R-squared:                        0.0065
+Estimator:                   PanelOLS   R-squared (Between):             -0.0202
+No. Observations:                 588   R-squared (Within):               0.0006
+Date:                Mon, Jan 26 2026   R-squared (Overall):             -0.0201
+Time:                        20:19:22   Log-likelihood                   -2416.1
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.8447
+Entities:                         147   P-value                           0.0924
+Avg Obs:                       4.0000   Distribution:                   F(1,437)
+Min Obs:                       4.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             2.1970
+                                        P-value                           0.1390
+Time periods:                       4   Distribution:                   F(1,437)
+Avg Obs:                       147.00                                           
+Min Obs:                       147.00                                           
+Max Obs:                       147.00                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Treat_Top20:Time_Trend    -2.1264     1.4346    -1.4822     0.1390     -4.9461      0.6932
+==========================================================================================
+
+F-test for Poolability: 94.290
+P-value: 0.0000
+Distribution: F(149,437)
+
+Included effects: Entity, Time
+
+
+=== ROBUSTNESS CHECK 4: PLACEBO (CHD) ===
+Outcome: CHD_Rate
+Treatment: Treat_Top20
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:               CHD_Rate   R-squared:                        0.0014
+Estimator:                   PanelOLS   R-squared (Between):              0.0096
+No. Observations:                1470   R-squared (Within):               0.0006
+Date:                Mon, Jan 26 2026   R-squared (Overall):              0.0095
+Time:                        20:19:22   Log-likelihood                   -5875.5
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      1.8928
+Entities:                         147   P-value                           0.1691
+Avg Obs:                      10.0000   Distribution:                  F(1,1313)
+Min Obs:                      10.0000                                           
+Max Obs:                      10.0000   F-statistic (robust):             1.8928
+                                        P-value                           0.1691
+Time periods:                      10   Distribution:                  F(1,1313)
+Avg Obs:                       147.00                                           
+Min Obs:                       147.00                                           
+Max Obs:                       147.00                                           
+                                                                                
+                                Parameter Estimates                                 
+====================================================================================
+                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------
+Treat_Top20:Post     2.0416     1.4839     1.3758     0.1691     -0.8695      4.9527
+====================================================================================
+
+F-test for Poolability: 57.363
+P-value: 0.0000
+Distribution: F(155,1313)
+
+Included effects: Entity, Time
+
+
+=== ROBUSTNESS CHECK 5: JOINT F-TEST (PRE-TRENDS) ===
+Model: COPD ~ Treat*YearDummies (Pre-2019)
+Null Hypothesis: All Pre-Treatment Interactions = 0
+Linear Equality Hypothesis Test
+H0: Linear equality constraint is valid
+Statistic: 4.5077
+P-value: 0.2116
+Distributed: chi2(3)
